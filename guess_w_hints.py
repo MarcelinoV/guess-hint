@@ -28,7 +28,7 @@ hint = word_bank[0][secret_word] # ensures correct hint is assigned to secret wo
 # not is used to say that the condition has to be false
 # for code to run, for example:
 
-print ("Guess which chess piece this is!\n") # Welcome/Prompt Message
+print("Guess which chess piece this is!\n") # Welcome/Prompt Message
 
 print(hint) # prints hint
 
