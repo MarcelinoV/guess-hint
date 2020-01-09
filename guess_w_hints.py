@@ -2,13 +2,13 @@
 # Modules used
 import random 
 
-word_bank = [{ # nested dictionary within a list
+word_bank = { # dictionary, the keys are the secret words & the values are the hints
 'queen': 'She runs the game',
 'rook': "home sweet home",
 'knight': 'Shining armor',
 'king': "Doesn't do much like modern ones",
 'bishop':'Religious zealot',
-'pawn':'Another cog in the system'}]
+'pawn':'Another cog in the system'}
 
 bank_keys = [] # To be appended list
 guess = "" # empty string
@@ -16,12 +16,11 @@ guess_count = 0 # # of guesses user has made
 guess_limit = 3 # # of guesses user can make
 out_of_guesses = False # initial condition, User hasn't guessed yet
 
-for dict in word_bank: # access dict inside word_bank which is a list
-    for key in word_bank[0].keys(): # dict is index 0 in list, method returns keys of dict
-        bank_keys.append(key) # append keys to list
+for key in word_bank.keys(): # dict is index 0 in list, method returns keys of dict
+    bank_keys.append(key) # append keys to list
        
 secret_word = random.choice(bank_keys) # uses function to randomly choose word
-hint = word_bank[0][secret_word] # ensures correct hint is assigned to secret word
+hint = word_bank[secret_word] # ensures correct hint is assigned to secret word
 
 
 # and or & not are logical operators used to set conditions
