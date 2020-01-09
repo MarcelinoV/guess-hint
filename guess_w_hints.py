@@ -28,9 +28,9 @@ hint = word_bank[0][secret_word] # ensures correct hint is assigned to secret wo
 # not is used to say that the condition has to be false
 # for code to run, for example:
 
-print("Guess which chess piece this is!\n") # Welcome/Prompt Message
+print("Guess which chess piece this is!\n")
 
-print(hint) # prints hint
+print('Hint: ' + hint) # prints hint
 
 while guess != secret_word and not(out_of_guesses): # conditions that need to be met for game to end
 
@@ -38,7 +38,7 @@ while guess != secret_word and not(out_of_guesses): # conditions that need to be
 # while & if assume everything after IS TRUE
     
     if guess_count < guess_limit: # While user hasn't surpassed guess limit
-        guess = input("Enter guess: ") # input value for guess variable
+        guess = input("\nEnter guess: ") # input value for guess variable
         guess_count += 1 # increment of guess count per guess
     else:
         out_of_guesses = True # becomes true if if clause above becomes untrue
