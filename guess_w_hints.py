@@ -23,16 +23,19 @@ for dict in word_bank: # access dict inside word_bank which is a list
 secret_word = random.choice(bank_keys) # uses function to randomly choose word
 hint = word_bank[0][secret_word] # ensures correct hint is assigned to secret word
 
-print(hint) # prints hint
 
 # and or & not are logical operators used to set conditions
 # not is used to say that the condition has to be false
 # for code to run, for example:
-    
+
+print ("Guess which chess piece this is!\n") # Welcome/Prompt Message
+
 while guess != secret_word and not(out_of_guesses): # conditions that need to be met for game to end
 
 # initial variable values are disregarded in logical statements
 # while & if assume everything after IS TRUE
+    print(hint) # prints hint
+    
     if guess_count < guess_limit: # While user hasn't surpassed guess limit
         guess = input("Enter guess: ") # input value for guess variable
         guess_count += 1 # increment of guess count per guess
@@ -43,6 +46,6 @@ if out_of_guesses:
     print("Out of guesses, you LOSE!") # Losing message
 
 else:
-    print("Nice guess, you WIN!") # Winning message
+    print("Nice guess, you WIN!\n") # Winning message
 
 print(secret_word)
