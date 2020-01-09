@@ -30,11 +30,12 @@ hint = word_bank[0][secret_word] # ensures correct hint is assigned to secret wo
 
 print ("Guess which chess piece this is!\n") # Welcome/Prompt Message
 
+print(hint) # prints hint
+
 while guess != secret_word and not(out_of_guesses): # conditions that need to be met for game to end
 
 # initial variable values are disregarded in logical statements
 # while & if assume everything after IS TRUE
-    print(hint) # prints hint
     
     if guess_count < guess_limit: # While user hasn't surpassed guess limit
         guess = input("Enter guess: ") # input value for guess variable
